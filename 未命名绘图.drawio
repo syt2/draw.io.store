@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-03-09T08:17:56.597Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15" etag="irC_jBQTN4uaj2skq5Xw" version="21.0.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-03-09T08:19:52.889Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15" etag="5pAsptboDO755iRrQ-ld" version="21.0.2" type="github">
   <diagram name="第 1 页" id="VFazVJUxJogGp5_EuSBo">
     <mxGraphModel dx="3832" dy="2627" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
@@ -808,7 +808,7 @@
         <mxCell id="q6Fosyw1V_CmT3SRMPMA-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="q6Fosyw1V_CmT3SRMPMA-4" target="q6Fosyw1V_CmT3SRMPMA-13">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="q6Fosyw1V_CmT3SRMPMA-4" value="有新事件" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="q6Fosyw1V_CmT3SRMPMA-4" value="有新事件？" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-905" y="-190" width="120" height="50" as="geometry" />
         </mxCell>
         <mxCell id="q6Fosyw1V_CmT3SRMPMA-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="q6Fosyw1V_CmT3SRMPMA-6" target="q6Fosyw1V_CmT3SRMPMA-15">
@@ -817,8 +817,8 @@
         <mxCell id="q6Fosyw1V_CmT3SRMPMA-6" value="完全同步" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-1020" y="-100" width="70" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="q6Fosyw1V_CmT3SRMPMA-8" value="需完全同步" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="-985" y="-195" width="80" height="30" as="geometry" />
+        <mxCell id="q6Fosyw1V_CmT3SRMPMA-8" value="有，需完全同步" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-1000" y="-195" width="110" height="30" as="geometry" />
         </mxCell>
         <mxCell id="q6Fosyw1V_CmT3SRMPMA-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="q6Fosyw1V_CmT3SRMPMA-9" target="q6Fosyw1V_CmT3SRMPMA-18">
           <mxGeometry relative="1" as="geometry" />
@@ -826,8 +826,8 @@
         <mxCell id="q6Fosyw1V_CmT3SRMPMA-9" value="增量同步" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-733" y="-100" width="70" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="q6Fosyw1V_CmT3SRMPMA-12" value="需增量同步" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="-785" y="-190" width="80" height="30" as="geometry" />
+        <mxCell id="q6Fosyw1V_CmT3SRMPMA-12" value="有，需增量同步" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-800" y="-190" width="110" height="30" as="geometry" />
         </mxCell>
         <mxCell id="q6Fosyw1V_CmT3SRMPMA-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="q6Fosyw1V_CmT3SRMPMA-13" target="q6Fosyw1V_CmT3SRMPMA-37">
           <mxGeometry relative="1" as="geometry" />
@@ -921,13 +921,8 @@
         <mxCell id="q6Fosyw1V_CmT3SRMPMA-49" value="events接口的last_event_id" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="-493" y="-120" width="170" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="q6Fosyw1V_CmT3SRMPMA-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="q6Fosyw1V_CmT3SRMPMA-53" target="q6Fosyw1V_CmT3SRMPMA-31">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="-1310" y="370" />
-              <mxPoint x="-745" y="370" />
-            </Array>
-          </mxGeometry>
+        <mxCell id="q6Fosyw1V_CmT3SRMPMA-71" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="q6Fosyw1V_CmT3SRMPMA-53" target="q6Fosyw1V_CmT3SRMPMA-68">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="q6Fosyw1V_CmT3SRMPMA-53" value="未登录/无网等" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-1370" y="-70" width="120" height="60" as="geometry" />
@@ -952,6 +947,20 @@
         </mxCell>
         <mxCell id="q6Fosyw1V_CmT3SRMPMA-65" value="&lt;h1&gt;发生同步属性修改&lt;/h1&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-1225" y="866.44" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="q6Fosyw1V_CmT3SRMPMA-67" value="无" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-850" y="-135" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="q6Fosyw1V_CmT3SRMPMA-72" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="q6Fosyw1V_CmT3SRMPMA-68" target="q6Fosyw1V_CmT3SRMPMA-31">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-1310" y="380" />
+              <mxPoint x="-745" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="q6Fosyw1V_CmT3SRMPMA-68" value="last_event_id保持端上不变" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1370" y="90" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
