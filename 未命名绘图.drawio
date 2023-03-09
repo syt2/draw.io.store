@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-03-09T08:20:58.221Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15" etag="PfaG51wvroeZ4ItC6jIe" version="21.0.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-03-09T08:23:22.219Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15" etag="lx1NuaQwY56CNzRZ8OlF" version="21.0.2" type="github">
   <diagram name="第 1 页" id="VFazVJUxJogGp5_EuSBo">
     <mxGraphModel dx="3832" dy="2627" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
@@ -859,7 +859,7 @@
         <mxCell id="q6Fosyw1V_CmT3SRMPMA-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="q6Fosyw1V_CmT3SRMPMA-22" target="q6Fosyw1V_CmT3SRMPMA-41">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="q6Fosyw1V_CmT3SRMPMA-22" value="对比服务端下发的[eventS_1...eventS_n]和客户端上等待同步的[eventL_1...eventL_m]，&lt;br&gt;&lt;br&gt;1. 对于eventS_i的其中的更新的属性p，存在eventL_j也更新了属性p，且eventL_j.op_at &amp;gt;&amp;nbsp;eventS_i.op_at，则eventS_i的属性p在本客户端上不更新，否则更新该属性p&lt;br&gt;&lt;br&gt;2. 继续查找eventS_i的其他属性q, s, t...&lt;br&gt;&lt;br&gt;3. 继续查找下一个eventS_i+1" style="rounded=1;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+        <mxCell id="q6Fosyw1V_CmT3SRMPMA-22" value="对比服务端下发的[eventS_1...eventS_n]和客户端上等待同步的[eventL_1...eventL_m]，&lt;br&gt;&lt;br&gt;1. 对于eventS_i更新的属性p，存在eventL_j也更新了属性p，且eventL_j.op_at &amp;gt;&amp;nbsp;eventS_i.op_at，则eventS_i的属性p在本客户端上不更新，否则更新该属性p&lt;br&gt;&lt;br&gt;2. 继续处理eventS_i的其他属性q, s, t...&lt;br&gt;&lt;br&gt;3. 继续处理下一个eventS_i+1" style="rounded=1;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
           <mxGeometry x="-530" y="100" width="400" height="200" as="geometry" />
         </mxCell>
         <mxCell id="q6Fosyw1V_CmT3SRMPMA-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="q6Fosyw1V_CmT3SRMPMA-23" target="q6Fosyw1V_CmT3SRMPMA-41">
@@ -909,8 +909,8 @@
         <mxCell id="q6Fosyw1V_CmT3SRMPMA-41" value="state接口的last_event_id &amp;gt;&amp;nbsp;&lt;br&gt;events接口的last_event_id?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-655" y="360" width="210" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="q6Fosyw1V_CmT3SRMPMA-45" value="是" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="-453" y="370" width="40" height="30" as="geometry" />
+        <mxCell id="q6Fosyw1V_CmT3SRMPMA-45" value="是，说明事件未拉完" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-478" y="370" width="130" height="30" as="geometry" />
         </mxCell>
         <mxCell id="q6Fosyw1V_CmT3SRMPMA-46" value="本地last_event_id" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="-853" y="-230" width="120" height="30" as="geometry" />
