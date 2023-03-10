@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-03-10T09:49:51.426Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15" etag="K2gw1jq0xD-zQ0eGlujA" version="21.0.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-03-10T10:25:20.104Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15" etag="BzUPpRLTylZXHcHmO7v0" version="21.0.2" type="github">
   <diagram name="第 1 页" id="VFazVJUxJogGp5_EuSBo">
-    <mxGraphModel dx="5696" dy="3174" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
+    <mxGraphModel dx="3994" dy="2113" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -898,25 +898,19 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="q6Fosyw1V_CmT3SRMPMA-53" value="未登录/无网等" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-1770" y="-63.22" width="120" height="60" as="geometry" />
+          <mxGeometry x="-1760" y="-63.22" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="q6Fosyw1V_CmT3SRMPMA-59" value="否" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="-950" y="456.78" width="40" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="q6Fosyw1V_CmT3SRMPMA-130" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="q6Fosyw1V_CmT3SRMPMA-60" target="q6Fosyw1V_CmT3SRMPMA-84">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="-1840" y="654" />
-              <mxPoint x="-1840" y="-720" />
-              <mxPoint x="-1040" y="-720" />
-            </Array>
-          </mxGeometry>
+        <mxCell id="q6Fosyw1V_CmT3SRMPMA-133" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="q6Fosyw1V_CmT3SRMPMA-60" target="q6Fosyw1V_CmT3SRMPMA-132">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="q6Fosyw1V_CmT3SRMPMA-60" value="E.count &amp;gt; 0" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-1220" y="626.78" width="150" height="53.22" as="geometry" />
         </mxCell>
         <mxCell id="q6Fosyw1V_CmT3SRMPMA-64" value="是" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="-1270" y="620" width="40" height="30" as="geometry" />
+          <mxGeometry x="-1191.25" y="680" width="40" height="30" as="geometry" />
         </mxCell>
         <mxCell id="q6Fosyw1V_CmT3SRMPMA-72" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="q6Fosyw1V_CmT3SRMPMA-68" target="q6Fosyw1V_CmT3SRMPMA-31">
           <mxGeometry relative="1" as="geometry">
@@ -927,7 +921,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="q6Fosyw1V_CmT3SRMPMA-68" value="last_event_id保持端上不变" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-1770" y="96.78" width="120" height="60" as="geometry" />
+          <mxGeometry x="-1760" y="96.78" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="q6Fosyw1V_CmT3SRMPMA-90" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="q6Fosyw1V_CmT3SRMPMA-80" target="q6Fosyw1V_CmT3SRMPMA-82">
           <mxGeometry relative="1" as="geometry" />
@@ -1016,6 +1010,59 @@
         </mxCell>
         <mxCell id="q6Fosyw1V_CmT3SRMPMA-123" value="&lt;p&gt;&lt;b&gt;合并e至E表中&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;E表中无E(i).reading_id == e.reading_id，此事件直接新增至E表&lt;/li&gt;&lt;li&gt;E表中存在E(i).reading_id == e.reading_id&lt;/li&gt;&lt;ul&gt;&lt;li&gt;e.op == insert，此时e.reading_id必为空，E(i)应为另一个不相关的插入事件，故E表新增该事件&lt;/li&gt;&lt;li&gt;e.op == delete，清空E表中E(i) == e.reading_id 的所有事件(&lt;font color=&quot;#ff0000&quot;&gt;待确认，即删除后不上报update&lt;/font&gt;)&lt;/li&gt;&lt;li&gt;e.op == update&lt;/li&gt;&lt;ul&gt;&lt;li&gt;E(i).op == insert：e所修改属性覆盖E(i)，更新E(i)的op_at和client_event_id，E(i)移到E表最新位置&lt;/li&gt;&lt;li&gt;E(i).op == update：同上逻辑&lt;/li&gt;&lt;li&gt;E(i).op == delete：不可能&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;/ul&gt;" style="whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
           <mxGeometry x="-890" y="-690" width="500" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="q6Fosyw1V_CmT3SRMPMA-131" value="&lt;b&gt;Put 响应处理&lt;br&gt;&lt;/b&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;该列为&lt;/span&gt;http code（数据组E(0)...E(k)状态响应码）&lt;/b&gt;&lt;br&gt;&lt;/li&gt;&lt;li&gt;422：完全同步后重新put，若仍旧422，则清空L表，E表，D后完全同步&lt;/li&gt;&lt;li&gt;500：重试&lt;/li&gt;&lt;li&gt;200：&lt;/li&gt;&lt;ul&gt;&lt;li style=&quot;font-weight: bold;&quot;&gt;以下为E(i)对应的code（单数据响应码，若某条为非200，则后续所有event都是202Accept）&lt;/li&gt;&lt;li&gt;200：E表中删除E(i)&lt;/li&gt;&lt;li&gt;409：&lt;/li&gt;&lt;li&gt;422：&lt;/li&gt;&lt;li&gt;500：结束处理，重试&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="-760" y="740" width="505" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="q6Fosyw1V_CmT3SRMPMA-140" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="q6Fosyw1V_CmT3SRMPMA-132" target="q6Fosyw1V_CmT3SRMPMA-135">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="q6Fosyw1V_CmT3SRMPMA-132" value="Put events接口 (D) (E(0)...E(k))" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1232.5" y="720" width="175" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="q6Fosyw1V_CmT3SRMPMA-135" value="&lt;b&gt;Put响应处理&lt;br&gt;&lt;/b&gt;&lt;b style=&quot;text-align: left;&quot;&gt;http code（数据组E(0)...E(k)状态响应码）&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1300" y="900" width="310" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="q6Fosyw1V_CmT3SRMPMA-136" value="422：完全同步后重新put，若仍旧422，则清空L表，E表，D后完全同步" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="q6Fosyw1V_CmT3SRMPMA-135">
+          <mxGeometry y="40" width="310" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="q6Fosyw1V_CmT3SRMPMA-137" value="500：重试，重试次数&amp;gt;3则结束" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="q6Fosyw1V_CmT3SRMPMA-135">
+          <mxGeometry y="90" width="310" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="q6Fosyw1V_CmT3SRMPMA-138" value="200" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="q6Fosyw1V_CmT3SRMPMA-135">
+          <mxGeometry y="140" width="310" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="q6Fosyw1V_CmT3SRMPMA-141" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="q6Fosyw1V_CmT3SRMPMA-137" target="q6Fosyw1V_CmT3SRMPMA-132">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-930" y="1015" />
+              <mxPoint x="-930" y="737" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="q6Fosyw1V_CmT3SRMPMA-142" value="&lt;b&gt;Put响应处理&lt;br&gt;&lt;/b&gt;&lt;span style=&quot;font-weight: bold; text-align: left;&quot;&gt;以下为E(i)对应的code（单数据响应码，若某条为非200，则后续所有event都是202Accept）&lt;/span&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=70;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1800" y="1059.25" width="260" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="q6Fosyw1V_CmT3SRMPMA-143" value="200：E表中删除E(i)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="q6Fosyw1V_CmT3SRMPMA-142">
+          <mxGeometry y="70" width="260" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="q6Fosyw1V_CmT3SRMPMA-144" value="409：冲突" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="q6Fosyw1V_CmT3SRMPMA-142">
+          <mxGeometry y="120" width="260" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="q6Fosyw1V_CmT3SRMPMA-145" value="422: 完全同步" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="q6Fosyw1V_CmT3SRMPMA-142">
+          <mxGeometry y="170" width="260" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="q6Fosyw1V_CmT3SRMPMA-146" value="500：重试，需要先Pull" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="q6Fosyw1V_CmT3SRMPMA-142">
+          <mxGeometry y="220" width="260" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="q6Fosyw1V_CmT3SRMPMA-147" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="q6Fosyw1V_CmT3SRMPMA-138" target="q6Fosyw1V_CmT3SRMPMA-142">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-1357" y="1065" />
+              <mxPoint x="-1357" y="1010" />
+              <mxPoint x="-1667" y="1010" />
+            </Array>
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
