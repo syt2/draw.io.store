@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-03-10T10:27:09.477Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15" etag="U2k3txVyZQO8mBr2Vzvj" version="21.0.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-03-10T10:27:16.676Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15" etag="OX-kVTUTpAY0ty69qyxa" version="21.0.2" type="github">
   <diagram name="第 1 页" id="VFazVJUxJogGp5_EuSBo">
     <mxGraphModel dx="6155" dy="3460" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
@@ -1010,9 +1010,6 @@
         </mxCell>
         <mxCell id="q6Fosyw1V_CmT3SRMPMA-123" value="&lt;p&gt;&lt;b&gt;合并e至E表中&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;E表中无E(i).reading_id == e.reading_id，此事件直接新增至E表&lt;/li&gt;&lt;li&gt;E表中存在E(i).reading_id == e.reading_id&lt;/li&gt;&lt;ul&gt;&lt;li&gt;e.op == insert，此时e.reading_id必为空，E(i)应为另一个不相关的插入事件，故E表新增该事件&lt;/li&gt;&lt;li&gt;e.op == delete，清空E表中E(i) == e.reading_id 的所有事件(&lt;font color=&quot;#ff0000&quot;&gt;待确认，即删除后不上报update&lt;/font&gt;)&lt;/li&gt;&lt;li&gt;e.op == update&lt;/li&gt;&lt;ul&gt;&lt;li&gt;E(i).op == insert：e所修改属性覆盖E(i)，更新E(i)的op_at和client_event_id，E(i)移到E表最新位置&lt;/li&gt;&lt;li&gt;E(i).op == update：同上逻辑&lt;/li&gt;&lt;li&gt;E(i).op == delete：不可能&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;/ul&gt;" style="whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
           <mxGeometry x="-890" y="-690" width="500" height="190" as="geometry" />
-        </mxCell>
-        <mxCell id="q6Fosyw1V_CmT3SRMPMA-131" value="&lt;b&gt;Put 响应处理&lt;br&gt;&lt;/b&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;该列为&lt;/span&gt;http code（数据组E(0)...E(k)状态响应码）&lt;/b&gt;&lt;br&gt;&lt;/li&gt;&lt;li&gt;422：完全同步后重新put，若仍旧422，则清空L表，E表，D后完全同步&lt;/li&gt;&lt;li&gt;500：重试&lt;/li&gt;&lt;li&gt;200：&lt;/li&gt;&lt;ul&gt;&lt;li style=&quot;font-weight: bold;&quot;&gt;以下为E(i)对应的code（单数据响应码，若某条为非200，则后续所有event都是202Accept）&lt;/li&gt;&lt;li&gt;200：E表中删除E(i)&lt;/li&gt;&lt;li&gt;409：&lt;/li&gt;&lt;li&gt;422：&lt;/li&gt;&lt;li&gt;500：结束处理，重试&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
-          <mxGeometry x="-760" y="740" width="505" height="270" as="geometry" />
         </mxCell>
         <mxCell id="q6Fosyw1V_CmT3SRMPMA-140" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="q6Fosyw1V_CmT3SRMPMA-132" target="q6Fosyw1V_CmT3SRMPMA-135">
           <mxGeometry relative="1" as="geometry" />
