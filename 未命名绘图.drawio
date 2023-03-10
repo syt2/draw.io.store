@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-03-10T10:28:17.287Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15" etag="Y7bMKt2fN_DcHRTFSsd9" version="21.0.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-03-10T10:33:07.406Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15" etag="EFi2a9bXmqMQSxsBRPaZ" version="21.0.2" type="github">
   <diagram name="第 1 页" id="VFazVJUxJogGp5_EuSBo">
     <mxGraphModel dx="3994" dy="2113" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
@@ -1062,19 +1062,19 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="q6Fosyw1V_CmT3SRMPMA-149" value="&lt;b&gt;冲突处理&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-1390" y="1240" width="280" height="270" as="geometry" />
+          <mxGeometry x="-1390" y="1240" width="310" height="270" as="geometry" />
         </mxCell>
-        <mxCell id="q6Fosyw1V_CmT3SRMPMA-150" value="insert exist" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="q6Fosyw1V_CmT3SRMPMA-149">
-          <mxGeometry y="30" width="280" height="60" as="geometry" />
+        <mxCell id="q6Fosyw1V_CmT3SRMPMA-150" value="insert exist（&lt;font color=&quot;#ff2600&quot;&gt;不会存在吧，insert的reading_id为空，后端如何判定存在&lt;/font&gt;）" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="q6Fosyw1V_CmT3SRMPMA-149">
+          <mxGeometry y="30" width="310" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="q6Fosyw1V_CmT3SRMPMA-151" value="update not exist" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="q6Fosyw1V_CmT3SRMPMA-149">
-          <mxGeometry y="90" width="280" height="60" as="geometry" />
+        <mxCell id="q6Fosyw1V_CmT3SRMPMA-151" value="update not exist（后端已删除，E表中删除E(i).reading_id的所有事件，L表删除reading_id的记录)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="q6Fosyw1V_CmT3SRMPMA-149">
+          <mxGeometry y="90" width="310" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="q6Fosyw1V_CmT3SRMPMA-152" value="update outdated" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="q6Fosyw1V_CmT3SRMPMA-149">
-          <mxGeometry y="150" width="280" height="60" as="geometry" />
+        <mxCell id="q6Fosyw1V_CmT3SRMPMA-152" value="update outdated（Pull同步后重试）" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="q6Fosyw1V_CmT3SRMPMA-149">
+          <mxGeometry y="150" width="310" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="q6Fosyw1V_CmT3SRMPMA-153" value="delete not exist" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="q6Fosyw1V_CmT3SRMPMA-149">
-          <mxGeometry y="210" width="280" height="60" as="geometry" />
+        <mxCell id="q6Fosyw1V_CmT3SRMPMA-153" value="delete not exist（后端已删除或不存在，E表中删除E(i).reading_id的所有事件，L表删除reading_id的记录）" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="q6Fosyw1V_CmT3SRMPMA-149">
+          <mxGeometry y="210" width="310" height="60" as="geometry" />
         </mxCell>
         <mxCell id="q6Fosyw1V_CmT3SRMPMA-154" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="q6Fosyw1V_CmT3SRMPMA-144" target="q6Fosyw1V_CmT3SRMPMA-149">
           <mxGeometry relative="1" as="geometry" />
