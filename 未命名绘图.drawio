@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-03-10T10:27:16.676Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15" etag="OX-kVTUTpAY0ty69qyxa" version="21.0.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-03-10T10:28:17.287Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15" etag="Y7bMKt2fN_DcHRTFSsd9" version="21.0.2" type="github">
   <diagram name="第 1 页" id="VFazVJUxJogGp5_EuSBo">
-    <mxGraphModel dx="6155" dy="3460" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
+    <mxGraphModel dx="3994" dy="2113" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1040,7 +1040,7 @@
         <mxCell id="q6Fosyw1V_CmT3SRMPMA-142" value="&lt;b&gt;Put响应处理&lt;br&gt;&lt;/b&gt;&lt;span style=&quot;font-weight: bold; text-align: left;&quot;&gt;以下为E(i)对应的code（单数据响应码，若某条为非200，则后续所有event都是202Accept）&lt;/span&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=70;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-1800" y="1059.25" width="260" height="270" as="geometry" />
         </mxCell>
-        <mxCell id="q6Fosyw1V_CmT3SRMPMA-143" value="200：E表中删除E(i)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="q6Fosyw1V_CmT3SRMPMA-142">
+        <mxCell id="q6Fosyw1V_CmT3SRMPMA-143" value="200：E表中删除E(i)，对于E(i).op == insert类型，L表中更新其reading_id" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="q6Fosyw1V_CmT3SRMPMA-142">
           <mxGeometry y="70" width="260" height="50" as="geometry" />
         </mxCell>
         <mxCell id="q6Fosyw1V_CmT3SRMPMA-144" value="409：冲突" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="q6Fosyw1V_CmT3SRMPMA-142">
