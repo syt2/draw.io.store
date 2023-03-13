@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-03-13T07:52:47.531Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15" etag="x3VfKHe4Uq7F5eiyV6xS" version="21.0.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-03-13T08:04:33.450Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15" etag="gfoQuQGBlyHPPQT7oTAu" version="21.0.2" type="github">
   <diagram name="第 1 页" id="VFazVJUxJogGp5_EuSBo">
     <mxGraphModel dx="3994" dy="2113" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
@@ -1037,10 +1037,10 @@
         <mxCell id="q6Fosyw1V_CmT3SRMPMA-135" value="&lt;b&gt;Put响应处理&lt;br&gt;&lt;/b&gt;&lt;b style=&quot;text-align: left;&quot;&gt;http code（数据组E(0)...E(k)状态响应码）&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-1300" y="900" width="310" height="190" as="geometry" />
         </mxCell>
-        <mxCell id="q6Fosyw1V_CmT3SRMPMA-136" value="422：完全同步后重新put，若仍旧422，则清空L表，E表，D，之后完全同步" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="q6Fosyw1V_CmT3SRMPMA-135" vertex="1">
+        <mxCell id="q6Fosyw1V_CmT3SRMPMA-136" value="422：完全同步后重新put，重试次数++&lt;br&gt;若重试次数&amp;gt;N，则清空L表，E表，D，之后完全同步" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="q6Fosyw1V_CmT3SRMPMA-135" vertex="1">
           <mxGeometry y="40" width="310" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="q6Fosyw1V_CmT3SRMPMA-137" value="500：重试，重试次数&amp;gt;3则结束" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="q6Fosyw1V_CmT3SRMPMA-135" vertex="1">
+        <mxCell id="q6Fosyw1V_CmT3SRMPMA-137" value="500：重试次数++&lt;br&gt;若重试次数&amp;gt;N则结束" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="q6Fosyw1V_CmT3SRMPMA-135" vertex="1">
           <mxGeometry y="90" width="310" height="50" as="geometry" />
         </mxCell>
         <mxCell id="q6Fosyw1V_CmT3SRMPMA-138" value="200" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="q6Fosyw1V_CmT3SRMPMA-135" vertex="1">
@@ -1055,10 +1055,10 @@
         <mxCell id="q6Fosyw1V_CmT3SRMPMA-144" value="409：冲突" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="q6Fosyw1V_CmT3SRMPMA-142" vertex="1">
           <mxGeometry y="120" width="260" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="q6Fosyw1V_CmT3SRMPMA-145" value="422: 完全同步" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="q6Fosyw1V_CmT3SRMPMA-142" vertex="1">
+        <mxCell id="q6Fosyw1V_CmT3SRMPMA-145" value="422: 完全同步，重试次数++&lt;br&gt;若重试次数&amp;gt;N，则清空L表，E表，D，之后完全同步" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="q6Fosyw1V_CmT3SRMPMA-142" vertex="1">
           <mxGeometry y="170" width="260" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="q6Fosyw1V_CmT3SRMPMA-146" value="500：重试，需要先Pull" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="q6Fosyw1V_CmT3SRMPMA-142" vertex="1">
+        <mxCell id="q6Fosyw1V_CmT3SRMPMA-146" value="500：重试次数++&lt;br&gt;若重试次数&amp;gt;N则结束" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="q6Fosyw1V_CmT3SRMPMA-142" vertex="1">
           <mxGeometry y="220" width="260" height="50" as="geometry" />
         </mxCell>
         <mxCell id="q6Fosyw1V_CmT3SRMPMA-147" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="q6Fosyw1V_CmT3SRMPMA-138" target="q6Fosyw1V_CmT3SRMPMA-142" edge="1">
